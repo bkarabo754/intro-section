@@ -37,7 +37,7 @@ const Hero = () => {
       <header className="p-5 flex items-center justify-between">
         <div className="lg:flex lg:items-start lg:justify-start">
           <img src={logo} alt="Logo Icon" className="lg:mr-5" />
-          <nav className="navbar">
+          <nav className="navbar justify-start">
             <div>
               <button
                 onClick={() => setOpenFeatures(!openFeatures)}
