@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700&family=Lato:wght@700&family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@500&family=Roboto:wght@700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+p,
+li {
+  @apply opacity-75;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+}
+
+.navbar {
+  position: absolute;
+  top: -100%;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  width: 50%;
+  transition: all 0.3 ease-in-out;
+  z-index: -1;
+}
+
+.navbar.open {
+  top: 5rem;
+  z-index: 99;
+  background-color: #fff;
+}
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: auto;
+    padding: 0;
+    z-index: auto;
+  }
+
+  .navbar.open {
+    top: 0;
+    background-color: transparent;
+    z-index: auto;
+  }
+
+  .navbar div {
+    @apply mr-10;
+  }
+
+  .navbar div ul {
+    position: absolute;
+  }
+}
